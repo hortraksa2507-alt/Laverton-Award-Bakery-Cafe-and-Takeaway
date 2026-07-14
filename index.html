@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Laverton Award Bakery Cafe and Takeaway — authentic NZ-style pies, fresh baked goods, and great coffee in Laverton North, Melbourne. Open early weekdays, weekends from 8am.">
-  <meta name="keywords" content="bakery, cafe, pies, Laverton North, takeaway, coffee, sausage rolls">
+  <meta name="description" content="Laverton Award Bakery Cafe and Takeaway — authentic NZ-style pies, fresh baked goods, and great coffee in Laverton North, Melbourne. Open weekdays from 5:30am.">
+  <meta name="keywords" content="bakery, cafe, pies, Laverton North, takeaway, coffee, sausage rolls, NZ pies">
   <meta property="og:title" content="Laverton Award Bakery Cafe and Takeaway">
   <meta property="og:description" content="Authentic NZ-style pies, fresh baked goods & great coffee. Unit 9/110-116 Fitzgerald Rd, Laverton North.">
   <meta property="og:image" content="assets/images/hero.jpg">
   <meta property="og:type" content="website">
-  <title>Laverton Award Bakery Cafe and Takeaway</title>
+  <title>Laverton Award Bakery Cafe and Takeaway | Laverton North</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -30,29 +30,43 @@
     <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
     <symbol id="icon-fern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V4"/><path d="M12 8c-3-2-6-1-8 2 3-1 6 0 8 2"/><path d="M12 12c-4-2-7-1-9 2 4-1 7 0 9 2"/><path d="M12 16c-3-2-6-1-7 1 3-1 5 0 7 1"/></symbol>
     <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
   </svg>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="tel:+61499999991" class="top-bar-link">
+        <svg class="icon-sm" aria-hidden="true"><use href="#icon-phone"/></svg>
+        0499 999 991
+      </a>
+      <span class="top-bar-divider" aria-hidden="true">·</span>
+      <span class="top-bar-hours">
+        <svg class="icon-sm" aria-hidden="true"><use href="#icon-clock"/></svg>
+        Mon–Fri 5:30am–4pm · Sat–Sun 8am–3pm
+      </span>
+      <span class="top-bar-status" id="topBarStatus"></span>
+    </div>
+  </div>
 
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="logo">
-        <img src="assets/images/logo.jpg" alt="Laverton Award Bakery logo" class="logo-img" width="52" height="52">
+        <img src="assets/logo.svg" alt="" class="logo-img" width="48" height="48">
         <span class="logo-text">
           <span class="logo-name">Laverton Award</span>
           <span class="logo-sub">Bakery Cafe & Takeaway</span>
         </span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#visit">Visit Us</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="tel:+61499999991" class="nav-cta">Order Now</a></li>
       </ul>
     </nav>
   </header>
@@ -60,35 +74,37 @@
   <main>
     <section class="hero" id="hero">
       <div class="hero-bg">
-        <img src="assets/images/hero.jpg" alt="Laverton Award Bakery storefront" class="hero-bg-img" fetchpriority="high">
+        <img src="assets/images/hero.jpg" alt="" class="hero-bg-img" fetchpriority="high">
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content container">
+        <img src="assets/logo.svg" alt="Laverton Award Bakery" class="hero-logo">
         <div class="hero-badge" id="openStatus">
           <span class="status-dot"></span>
           <span class="status-text">Checking hours…</span>
         </div>
-        <h1 class="hero-title">Freshly Baked.<br>Made with Award.</h1>
-        <p class="hero-subtitle">Authentic New Zealand–style pies, handcrafted pastries, and barista coffee — served with a smile in the heart of Laverton North.</p>
+        <h1 class="hero-title">Freshly Baked.<br><em>Made with Award.</em></h1>
+        <p class="hero-subtitle">Authentic New Zealand–style pies, handcrafted pastries & barista coffee in Laverton North. Open early for tradies, families & locals.</p>
         <div class="hero-actions">
-          <a href="tel:+61499999991" class="btn btn-primary">
+          <a href="tel:+61499999991" class="btn btn-primary btn-lg">
             <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
-            Call 0499 999 991
+            Call to Order
           </a>
-          <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <a href="#menu" class="btn btn-secondary btn-lg">View Menu</a>
+          <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
             <svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg>
-            Get Directions
+            Directions
           </a>
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-value">4.6</span>
+            <span class="stat-value">4.6<svg class="stat-star" aria-hidden="true"><use href="#icon-star"/></svg></span>
             <span class="stat-label">Google Rating</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
             <span class="stat-value">195+</span>
-            <span class="stat-label">Happy Reviews</span>
+            <span class="stat-label">Reviews</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
@@ -97,49 +113,78 @@
           </div>
         </div>
       </div>
-      <a href="#about" class="hero-scroll" aria-label="Scroll to content">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a>
+    </section>
+
+    <section class="highlights">
+      <div class="container highlights-grid">
+        <div class="highlight-card">
+          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pie"/></svg></span>
+          <strong>NZ-Style Pies</strong>
+          <span>Pepper steak, butter chicken & more</span>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+          <strong>Barista Coffee</strong>
+          <span>Flat whites, lattes & long blacks</span>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-takeaway"/></svg></span>
+          <strong>Takeaway Ready</strong>
+          <span>Grab & go before work or lunch</span>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-parking"/></svg></span>
+          <strong>Easy Parking</strong>
+          <span>Plenty of parking out front</span>
+        </div>
+      </div>
     </section>
 
     <section class="about section" id="about">
-      <div class="container about-grid">
-        <div class="about-images reveal">
-          <img src="assets/images/hero.jpg" alt="Laverton Award Bakery interior and display" class="about-img about-img-main">
-          <img src="assets/images/logo.jpg" alt="Laverton Award Bakery official logo" class="about-img about-img-logo">
+      <div class="container">
+        <div class="about-showcase reveal">
+          <div class="about-photo-wrap">
+            <img src="assets/images/hero.jpg" alt="Fresh pies, sandwiches and cakes on display at Laverton Award Bakery" class="about-photo">
+            <div class="about-photo-badge">
+              <img src="assets/logo.svg" alt="" width="64" height="64">
+              <span>Est. Laverton North</span>
+            </div>
+          </div>
         </div>
-        <div class="about-content reveal">
-          <span class="section-tag">Our Story</span>
-          <h2 class="section-title">Laverton's Favourite Local Bakery</h2>
-          <p class="about-text">Laverton Award Bakery Cafe and Takeaway is a cherished neighbourhood spot known for its authentic New Zealand–style pies, flaky pastry, and generous fillings. Whether you're grabbing breakfast before work or a hearty lunch on the go, we've got you covered.</p>
-          <p class="about-text">From pepper steak and butter chicken pies to cream donuts and freshly brewed coffee, every item is made to satisfy. Our friendly team and welcoming atmosphere keep locals coming back — and visitors driving from across Melbourne just to taste our award-worthy pies.</p>
-          <ul class="about-features">
+        <div class="about-grid">
+          <div class="about-content reveal">
+            <span class="section-tag">Our Story</span>
+            <h2 class="section-title">Laverton's Favourite Local Bakery</h2>
+            <p class="about-text">Laverton Award Bakery Cafe and Takeaway is a cherished neighbourhood spot known for authentic New Zealand–style pies, flaky pastry, and generous fillings. From early-morning tradies to weekend families, we serve the community with warmth and quality.</p>
+            <p class="about-text">Our self-service display is stocked daily with savoury pies, fresh sandwiches, cakes and slices. Pair your pie with a barista coffee and experience why locals — and visitors from across Melbourne — keep coming back.</p>
+          </div>
+          <ul class="about-features reveal">
             <li>
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pie"/></svg></span>
               <div>
                 <strong>Authentic NZ Pies</strong>
-                <span>Steak & cheese, pepper steak, butter chicken & more</span>
+                <span>Big chunks of meat, rich gravy, flaky pastry</span>
               </div>
             </li>
             <li>
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-coffee"/></svg></span>
               <div>
                 <strong>Barista Coffee</strong>
-                <span>Great coffee to pair with your favourite pie</span>
+                <span>The perfect companion to any pie</span>
               </div>
             </li>
             <li>
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-bakery"/></svg></span>
               <div>
-                <strong>Fresh Daily</strong>
-                <span>Sausage rolls, cakes, slices & sweet treats</span>
+                <strong>Baked Fresh Daily</strong>
+                <span>Pies, rolls, cakes, slices & donuts</span>
               </div>
             </li>
             <li>
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-fern"/></svg></span>
               <div>
                 <strong>Kiwi Heritage</strong>
-                <span>Traditional New Zealand bakery flavours & recipes</span>
+                <span>Traditional NZ bakery recipes & flavours</span>
               </div>
             </li>
           </ul>
@@ -152,7 +197,7 @@
         <div class="section-header reveal">
           <span class="section-tag">What We Serve</span>
           <h2 class="section-title">Our Menu</h2>
-          <p class="section-desc">Generous portions, flaky pastry, and flavours that keep you coming back. Most items $5–$12.</p>
+          <p class="section-desc">Generous portions and flavours that keep you coming back. Most items $5–$12.</p>
         </div>
 
         <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
@@ -164,218 +209,74 @@
 
         <div class="menu-panels">
           <div class="menu-panel active" id="menu-pies" role="tabpanel" aria-labelledby="tab-pies" data-panel="pies">
-            <div class="menu-panel-header">
-              <img src="assets/images/hero.jpg" alt="Fresh baked pies at Laverton Award Bakery" class="menu-panel-img">
-              <div>
+            <div class="menu-panel-banner">
+              <img src="assets/images/hero.jpg" alt="" class="menu-banner-img" style="object-position: 15% center;">
+              <div class="menu-banner-text">
                 <h3>Award-Winning NZ Pies</h3>
-                <p>Our signature pies with big chunks of meat, rich gravy, and buttery flaky pastry. Customer favourites below.</p>
+                <p>Big chunks of meat, rich gravy & buttery flaky pastry</p>
               </div>
             </div>
             <div class="menu-list">
-              <div class="menu-item featured">
-                <div class="menu-item-info">
-                  <h4>Pepper Steak Pie <span class="badge">Popular</span></h4>
-                  <p>Rich gravy with big chunks of pepper steak in golden flaky pastry</p>
-                </div>
-                <span class="menu-price">$6.50</span>
-              </div>
-              <div class="menu-item featured">
-                <div class="menu-item-info">
-                  <h4>Steak & Cheese Pie <span class="badge">Popular</span></h4>
-                  <p>Classic Kiwi combination of tender steak and melted cheese</p>
-                </div>
-                <span class="menu-price">$6.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Butter Chicken Pie</h4>
-                  <p>Creamy butter chicken filling with aromatic spices</p>
-                </div>
-                <span class="menu-price">$6.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Potato Mince & Cheese</h4>
-                  <p>Hearty potato and seasoned mince with melted cheese</p>
-                </div>
-                <span class="menu-price">$6.00</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Chicken Pie</h4>
-                  <p>Tender chicken in a savoury sauce, baked in flaky pastry</p>
-                </div>
-                <span class="menu-price">$6.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Meat Pie (Classic)</h4>
-                  <p>Traditional mince and gravy — a true bakery staple</p>
-                </div>
-                <span class="menu-price">$5.50</span>
-              </div>
+              <div class="menu-item featured"><div class="menu-item-info"><h4>Pepper Steak Pie <span class="badge">Popular</span></h4><p>Rich gravy with big chunks of pepper steak</p></div><span class="menu-price">$6.50</span></div>
+              <div class="menu-item featured"><div class="menu-item-info"><h4>Steak & Cheese Pie <span class="badge">Popular</span></h4><p>Classic Kiwi steak with melted cheese</p></div><span class="menu-price">$6.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Butter Chicken Pie</h4><p>Creamy butter chicken with aromatic spices</p></div><span class="menu-price">$6.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Potato Mince & Cheese</h4><p>Hearty potato and seasoned mince</p></div><span class="menu-price">$6.00</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Chicken Pie</h4><p>Tender chicken in savoury sauce</p></div><span class="menu-price">$6.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Classic Meat Pie</h4><p>Traditional mince and gravy</p></div><span class="menu-price">$5.50</span></div>
             </div>
           </div>
 
           <div class="menu-panel" id="menu-savoury" role="tabpanel" aria-labelledby="tab-savoury" data-panel="savoury" hidden>
-            <div class="menu-panel-header">
-              <img src="assets/images/hero.jpg" alt="Savoury baked goods" class="menu-panel-img">
-              <div>
+            <div class="menu-panel-banner">
+              <img src="assets/images/hero.jpg" alt="" class="menu-banner-img" style="object-position: 50% center;">
+              <div class="menu-banner-text">
                 <h3>Savoury Favourites</h3>
-                <p>Hot, fresh options perfect for breakfast, lunch, or a quick snack on the go.</p>
+                <p>Sausage rolls, sandwiches & hot food to go</p>
               </div>
             </div>
             <div class="menu-list">
-              <div class="menu-item featured">
-                <div class="menu-item-info">
-                  <h4>Sausage Roll <span class="badge">Popular</span></h4>
-                  <p>Seasoned sausage meat wrapped in golden puff pastry</p>
-                </div>
-                <span class="menu-price">$4.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Chicken Sausage</h4>
-                  <p>Juicy chicken sausage — a customer favourite</p>
-                </div>
-                <span class="menu-price">$4.00</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Party Pie</h4>
-                  <p>Mini meat pie — perfect for kids and snacking</p>
-                </div>
-                <span class="menu-price">$2.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Hot Food Selection</h4>
-                  <p>Daily rotating hot food including rolls and sandwiches</p>
-                </div>
-                <span class="menu-price">from $5</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Sandwiches</h4>
-                  <p>Freshly made sandwiches with your choice of fillings</p>
-                </div>
-                <span class="menu-price">from $6</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Quiche & Savory Slice</h4>
-                  <p>Baked savoury slices — great for sharing</p>
-                </div>
-                <span class="menu-price">$5.50</span>
-              </div>
+              <div class="menu-item featured"><div class="menu-item-info"><h4>Sausage Roll <span class="badge">Popular</span></h4><p>Seasoned sausage in golden puff pastry</p></div><span class="menu-price">$4.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Chicken Sausage</h4><p>Juicy chicken sausage</p></div><span class="menu-price">$4.00</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Party Pie</h4><p>Mini meat pie for snacking</p></div><span class="menu-price">$2.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Sandwiches & Wraps</h4><p>Freshly made daily selection</p></div><span class="menu-price">from $6</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Hot Food Selection</h4><p>Daily rotating hot food</p></div><span class="menu-price">from $5</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Quiche & Savory Slice</h4><p>Baked savoury slices</p></div><span class="menu-price">$5.50</span></div>
             </div>
           </div>
 
           <div class="menu-panel" id="menu-sweets" role="tabpanel" aria-labelledby="tab-sweets" data-panel="sweets" hidden>
-            <div class="menu-panel-header">
-              <img src="assets/images/hero.jpg" alt="Sweet treats and pastries" class="menu-panel-img">
-              <div>
-                <h3>Sweet Treats & Bakery</h3>
-                <p>Freshly baked cakes, slices, and our famous cream donuts.</p>
+            <div class="menu-panel-banner">
+              <img src="assets/images/hero.jpg" alt="" class="menu-banner-img" style="object-position: 85% center;">
+              <div class="menu-banner-text">
+                <h3>Sweet Treats</h3>
+                <p>Cakes, slices, donuts & daily specials</p>
               </div>
             </div>
             <div class="menu-list">
-              <div class="menu-item featured">
-                <div class="menu-item-info">
-                  <h4>Cream Donut <span class="badge">Signature</span></h4>
-                  <p>Soft donut filled with fresh cream — a bakery hallmark</p>
-                </div>
-                <span class="menu-price">$3.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Cakes & Slices</h4>
-                  <p>Selection of cakes, caramel slices, and baked treats</p>
-                </div>
-                <span class="menu-price">from $4</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Custard Tart</h4>
-                  <p>Classic egg custard in buttery shortcrust pastry</p>
-                </div>
-                <span class="menu-price">$4.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Muffins & Scones</h4>
-                  <p>Freshly baked daily — blueberry, choc chip & more</p>
-                </div>
-                <span class="menu-price">$3.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Cookies & Pastries</h4>
-                  <p>Assorted cookies and Danish pastries</p>
-                </div>
-                <span class="menu-price">from $2.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Daily Specials</h4>
-                  <p>Ask our team what's fresh from the oven today</p>
-                </div>
-                <span class="menu-price">varies</span>
-              </div>
+              <div class="menu-item featured"><div class="menu-item-info"><h4>Cream Donut <span class="badge">Signature</span></h4><p>Soft donut filled with fresh cream</p></div><span class="menu-price">$3.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Cakes & Slices</h4><p>Caramel slices and baked treats</p></div><span class="menu-price">from $4</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Custard Tart</h4><p>Classic egg custard pastry</p></div><span class="menu-price">$4.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Muffins & Scones</h4><p>Baked fresh daily</p></div><span class="menu-price">$3.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Cookies & Pastries</h4><p>Assorted cookies and Danish</p></div><span class="menu-price">from $2.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Daily Specials</h4><p>Ask what's fresh today</p></div><span class="menu-price">varies</span></div>
             </div>
           </div>
 
           <div class="menu-panel" id="menu-drinks" role="tabpanel" aria-labelledby="tab-drinks" data-panel="drinks" hidden>
-            <div class="menu-panel-header">
-              <img src="assets/images/logo.jpg" alt="Coffee and drinks" class="menu-panel-img menu-panel-img-round">
-              <div>
+            <div class="menu-panel-banner menu-panel-banner-dark">
+              <div class="menu-banner-icon"><svg class="icon-lg" aria-hidden="true"><use href="#icon-coffee"/></svg></div>
+              <div class="menu-banner-text">
                 <h3>Coffee & Beverages</h3>
-                <p>Start your morning right or enjoy a mid-day pick-me-up with our barista coffee.</p>
+                <p>Barista coffee to pair with your favourite pie</p>
               </div>
             </div>
             <div class="menu-list">
-              <div class="menu-item featured">
-                <div class="menu-item-info">
-                  <h4>Flat White <span class="badge">Popular</span></h4>
-                  <p>Silky microfoam over a double shot of espresso</p>
-                </div>
-                <span class="menu-price">$4.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Latte / Cappuccino</h4>
-                  <p>Classic espresso with steamed milk</p>
-                </div>
-                <span class="menu-price">$4.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Long Black / Espresso</h4>
-                  <p>Bold, rich espresso — the perfect pie companion</p>
-                </div>
-                <span class="menu-price">$3.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Hot Chocolate</h4>
-                  <p>Rich, creamy hot chocolate</p>
-                </div>
-                <span class="menu-price">$4.00</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Tea</h4>
-                  <p>Selection of black, green, and herbal teas</p>
-                </div>
-                <span class="menu-price">$3.50</span>
-              </div>
-              <div class="menu-item">
-                <div class="menu-item-info">
-                  <h4>Cold Drinks</h4>
-                  <p>Soft drinks, juices, and bottled water</p>
-                </div>
-                <span class="menu-price">from $3</span>
-              </div>
+              <div class="menu-item featured"><div class="menu-item-info"><h4>Flat White <span class="badge">Popular</span></h4><p>Silky microfoam over double espresso</p></div><span class="menu-price">$4.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Latte / Cappuccino</h4><p>Espresso with steamed milk</p></div><span class="menu-price">$4.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Long Black / Espresso</h4><p>Bold, rich espresso</p></div><span class="menu-price">$3.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Hot Chocolate</h4><p>Rich and creamy</p></div><span class="menu-price">$4.00</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Tea</h4><p>Black, green & herbal selection</p></div><span class="menu-price">$3.50</span></div>
+              <div class="menu-item"><div class="menu-item-info"><h4>Cold Drinks</h4><p>Soft drinks, juices & water</p></div><span class="menu-price">from $3</span></div>
             </div>
           </div>
         </div>
@@ -386,7 +287,7 @@
             <span><svg class="icon-sm" aria-hidden="true"><use href="#icon-card"/></svg> Cards accepted</span>
             <span><svg class="icon-sm" aria-hidden="true"><use href="#icon-clock"/></svg> Breakfast & lunch</span>
           </div>
-          <a href="tel:+61499999991" class="btn btn-primary">Call to Order</a>
+          <a href="tel:+61499999991" class="btn btn-primary">Call 0499 999 991 to Order</a>
         </div>
       </div>
     </section>
@@ -394,26 +295,34 @@
     <section class="gallery section" id="gallery">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">See Our Bakery</span>
-          <h2 class="section-title">Photo Gallery</h2>
-          <p class="section-desc">Real photos from our bakery. Follow us on Facebook for the latest updates.</p>
+          <span class="section-tag">Inside Our Bakery</span>
+          <h2 class="section-title">Fresh From the Display</h2>
+          <p class="section-desc">Self-service counters stocked daily with pies, sandwiches, cakes and more.</p>
         </div>
-        <div class="gallery-grid reveal">
-          <figure class="gallery-item gallery-item-large">
-            <img src="assets/images/hero.jpg" alt="Laverton Award Bakery storefront and display" loading="lazy">
-            <figcaption>Our bakery at Fitzgerald Rd, Laverton North</figcaption>
+        <div class="gallery-showcase reveal">
+          <figure class="gallery-hero">
+            <img src="assets/images/hero.jpg" alt="Self-service display with pies, sandwiches and desserts at Laverton Award Bakery">
+            <figcaption>Pies · Sandwiches · Cakes — fresh daily at our Fitzgerald Rd bakery</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="assets/images/logo.jpg" alt="Laverton Award Bakery official logo" loading="lazy">
-            <figcaption>Laverton Award Bakery</figcaption>
-          </figure>
-          <figure class="gallery-item gallery-item-cta">
-            <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer" class="gallery-facebook">
+          <div class="gallery-cards">
+            <div class="gallery-card">
+              <img src="assets/images/hero.jpg" alt="Savory pies and pastries" style="object-position: 12% center;">
+              <div class="gallery-card-label"><svg class="icon-sm" aria-hidden="true"><use href="#icon-pie"/></svg> Savory Pies</div>
+            </div>
+            <div class="gallery-card">
+              <img src="assets/images/hero.jpg" alt="Fresh sandwiches and wraps" style="object-position: 50% center;">
+              <div class="gallery-card-label"><svg class="icon-sm" aria-hidden="true"><use href="#icon-bakery"/></svg> Sandwiches</div>
+            </div>
+            <div class="gallery-card">
+              <img src="assets/images/hero.jpg" alt="Cakes and sweet treats" style="object-position: 88% center;">
+              <div class="gallery-card-label"><svg class="icon-sm" aria-hidden="true"><use href="#icon-bakery"/></svg> Sweet Treats</div>
+            </div>
+            <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer" class="gallery-card gallery-card-social">
               <svg class="icon-lg" aria-hidden="true"><use href="#icon-facebook"/></svg>
-              <span>Follow us on Facebook</span>
-              <small>See more photos & updates</small>
+              <strong>Follow on Facebook</strong>
+              <span>More photos & updates</span>
             </a>
-          </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -431,27 +340,18 @@
         <div class="reviews-grid">
           <blockquote class="review-card reveal">
             <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <p>"Best pies in the area! The pepper steak pie has a great gravy flavour with big chunks of meat and flaky pastry. Plenty of variety — one of the best places for lunch in an area with not too many options."</p>
-            <footer>
-              <cite>Matt P.</cite>
-              <span>Google Review</span>
-            </footer>
+            <p>"Best pies in the area! The pepper steak pie has a great gravy flavour with big chunks of meat and flaky pastry. One of the best places for lunch."</p>
+            <footer><cite>Matt P.</cite><span>Google Review</span></footer>
           </blockquote>
           <blockquote class="review-card reveal">
             <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <p>"An excellent pies and coffee establishment — all food and beverages so delicious. A must visit, you will not be disappointed. Ambience is busy and clean, with staff that are very friendly."</p>
-            <footer>
-              <cite>Sam F.</cite>
-              <span>Google Review</span>
-            </footer>
+            <p>"An excellent pies and coffee establishment — all food so delicious. Ambience is busy and clean, with staff that are very friendly."</p>
+            <footer><cite>Sam F.</cite><span>Google Review</span></footer>
           </blockquote>
           <blockquote class="review-card reveal">
             <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <p>"Laverton Award Bakery offers the best pies! Drove all the way to try them and was not disappointed — they are delicious. Definitely a must-go place. Food, service, and atmosphere all 5 stars."</p>
-            <footer>
-              <cite>Frank T.</cite>
-              <span>Google Review</span>
-            </footer>
+            <p>"Drove all the way to try their pies and was not disappointed. Food, service, and atmosphere all 5 stars. Definitely a must-go."</p>
+            <footer><cite>Frank T.</cite><span>Google Review</span></footer>
           </blockquote>
         </div>
       </div>
@@ -484,31 +384,13 @@
             <li><svg class="icon-sm" aria-hidden="true"><use href="#icon-takeaway"/></svg> Takeaway & dine-in</li>
           </ul>
           <div class="visit-actions">
-            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg>
-              Open in Google Maps
-            </a>
-            <a href="tel:+61499999991" class="btn btn-outline">
-              <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
-              0499 999 991
-            </a>
-            <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">
-              <svg class="icon" aria-hidden="true"><use href="#icon-facebook"/></svg>
-              Facebook
-            </a>
+            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg> Google Maps</a>
+            <a href="tel:+61499999991" class="btn btn-outline"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Call Us</a>
+            <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook"><svg class="icon" aria-hidden="true"><use href="#icon-facebook"/></svg> Facebook</a>
           </div>
         </div>
         <div class="visit-map reveal">
-          <iframe
-            title="Laverton Award Bakery location on Google Maps"
-            src="https://maps.google.com/maps?q=Laverton+Award+Bakery+Cafe+and+Takeaway,+Unit+9/110-116+Fitzgerald+Rd,+Laverton+North+VIC+3026&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <iframe title="Laverton Award Bakery on Google Maps" src="https://maps.google.com/maps?q=Laverton+Award+Bakery+Cafe+and+Takeaway,+Unit+9/110-116+Fitzgerald+Rd,+Laverton+North+VIC+3026&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -516,34 +398,19 @@
     <section class="contact section" id="contact">
       <div class="container">
         <div class="contact-card reveal">
+          <img src="assets/logo.svg" alt="" class="contact-logo" width="80" height="80">
           <div class="contact-content">
             <span class="section-tag">Get in Touch</span>
             <h2 class="section-title">Ready for a Great Pie?</h2>
-            <p>Call ahead for large orders, catering enquiries, or just to check what's fresh today. We'd love to hear from you.</p>
+            <p>Call ahead for large orders or catering. We'd love to hear from you.</p>
             <div class="contact-details">
-              <a href="tel:+61499999991" class="contact-link">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span>
-                <span>0499 999 991</span>
-              </a>
-              <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg></span>
-                <span>Unit 9/110-116 Fitzgerald Rd, Laverton North</span>
-              </a>
-              <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-facebook"/></svg></span>
-                <span>Follow us on Facebook</span>
-              </a>
+              <a href="tel:+61499999991" class="contact-link"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span>0499 999 991</a>
+              <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg></span>Unit 9/110-116 Fitzgerald Rd, Laverton North</a>
             </div>
           </div>
           <div class="contact-cta">
-            <a href="tel:+61499999991" class="btn btn-primary btn-large">
-              <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
-              Call Now
-            </a>
-            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
-              <svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg>
-              Get Directions
-            </a>
+            <a href="tel:+61499999991" class="btn btn-primary btn-large"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Call Now</a>
+            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg> Directions</a>
           </div>
         </div>
       </div>
@@ -553,10 +420,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/images/logo.jpg" alt="" class="footer-logo" width="48" height="48">
+        <img src="assets/logo.svg" alt="" class="footer-logo" width="56" height="56">
         <div>
           <strong>Laverton Award Bakery Cafe and Takeaway</strong>
-          <p>Fresh pies, pastries & coffee in Laverton North</p>
+          <p>Fresh NZ pies, pastries & coffee · Laverton North, VIC</p>
         </div>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
@@ -565,12 +432,20 @@
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit</a>
-        <a href="#contact">Contact</a>
         <a href="https://www.facebook.com/100063626400076/" target="_blank" rel="noopener noreferrer">Facebook</a>
       </nav>
-      <p class="footer-copy">&copy; <span id="year"></span> Laverton Award Bakery Cafe and Takeaway. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="year"></span> Laverton Award Bakery Cafe and Takeaway</p>
     </div>
   </footer>
+
+  <div class="mobile-bar" id="mobileBar">
+    <a href="tel:+61499999991" class="mobile-bar-btn mobile-bar-call">
+      <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Call
+    </a>
+    <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn mobile-bar-map">
+      <svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg> Directions
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

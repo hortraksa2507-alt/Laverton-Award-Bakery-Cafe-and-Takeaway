@@ -15,6 +15,7 @@
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   const openStatus = document.getElementById('openStatus');
+  const topBarStatus = document.getElementById('topBarStatus');
   const yearEl = document.getElementById('year');
 
   function isOpenNow() {
@@ -26,14 +27,21 @@
   }
 
   function updateOpenStatus() {
-    if (!openStatus) return;
-
     const open = isOpenNow();
-    const statusText = openStatus.querySelector('.status-text');
+    const label = open ? 'Open Now' : 'Closed';
 
-    openStatus.classList.remove('open', 'closed');
-    openStatus.classList.add(open ? 'open' : 'closed');
-    statusText.textContent = open ? 'Open Now' : 'Currently Closed';
+    if (openStatus) {
+      const statusText = openStatus.querySelector('.status-text');
+      openStatus.classList.remove('open', 'closed');
+      openStatus.classList.add(open ? 'open' : 'closed');
+      if (statusText) statusText.textContent = label;
+    }
+
+    if (topBarStatus) {
+      topBarStatus.textContent = label;
+      topBarStatus.classList.remove('open', 'closed');
+      topBarStatus.classList.add(open ? 'open' : 'closed');
+    }
   }
 
   function handleScroll() {

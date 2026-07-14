@@ -78,10 +78,18 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
     );
 
-    reveals.forEach((el) => observer.observe(el));
+    reveals.forEach((el, i) => {
+      if (el.closest('.highlights-grid')) {
+        el.classList.add('reveal-stagger');
+      }
+      el.style.transitionDelay = el.closest('.highlights-grid')
+        ? `${i % 4 * 0.08}s`
+        : '';
+      observer.observe(el);
+    });
   }
 
   function initSmoothNav() {

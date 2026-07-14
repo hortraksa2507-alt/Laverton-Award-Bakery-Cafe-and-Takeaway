@@ -12,7 +12,7 @@
   <title>Laverton Award Bakery Cafe and Takeaway | Laverton North</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
@@ -33,41 +33,35 @@
     <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
   </svg>
 
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <a href="tel:+61499999991" class="top-bar-link">
-        <svg class="icon-sm" aria-hidden="true"><use href="#icon-phone"/></svg>
-        0499 999 991
-      </a>
-      <span class="top-bar-divider" aria-hidden="true">·</span>
-      <span class="top-bar-hours">
-        <svg class="icon-sm" aria-hidden="true"><use href="#icon-clock"/></svg>
-        Mon–Fri 5:30am–4pm · Sat–Sun 8am–3pm
-      </span>
-      <span class="top-bar-status" id="topBarStatus"></span>
-    </div>
-  </div>
-
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="logo">
-        <img src="assets/logo.svg" alt="" class="logo-img" width="48" height="48">
-        <span class="logo-text">
-          <span class="logo-name">Laverton Award</span>
-          <span class="logo-sub">Bakery Cafe & Takeaway</span>
+      <div class="nav-shell">
+        <a href="#" class="logo">
+          <img src="assets/logo.svg" alt="" class="logo-img" width="40" height="40">
+          <span class="logo-text">
+            <span class="logo-name">Laverton Award</span>
+            <span class="logo-sub">Bakery Cafe & Takeaway</span>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="tel:+61499999991" class="nav-cta">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="header-meta">
+        <span class="header-hours">
+          <svg class="icon-sm" aria-hidden="true"><use href="#icon-clock"/></svg>
+          Mon–Fri 5:30am–4pm
         </span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#visit">Visit</a></li>
-        <li><a href="tel:+61499999991" class="nav-cta">Order Now</a></li>
-      </ul>
+        <span class="header-status" id="topBarStatus"></span>
+      </div>
     </nav>
   </header>
 
@@ -78,32 +72,30 @@
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content container">
-        <img src="assets/logo.svg" alt="Laverton Award Bakery" class="hero-logo">
         <div class="hero-badge" id="openStatus">
           <span class="status-dot"></span>
           <span class="status-text">Checking hours…</span>
         </div>
-        <h1 class="hero-title">Freshly Baked.<br><em>Made with Award.</em></h1>
-        <p class="hero-subtitle">Authentic New Zealand–style pies, handcrafted pastries & barista coffee in Laverton North. Open early for tradies, families & locals.</p>
+        <h1 class="hero-title">
+          <span class="hero-line">We bake the pies</span>
+          <span class="hero-line hero-line-accent">Laverton loves.</span>
+        </h1>
+        <p class="hero-subtitle">Authentic New Zealand–style pies, handcrafted pastries & barista coffee — open early for tradies, families & locals.</p>
         <div class="hero-actions">
           <a href="tel:+61499999991" class="btn btn-primary btn-lg">
             <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
             Call to Order
           </a>
           <a href="#menu" class="btn btn-secondary btn-lg">View Menu</a>
-          <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
-            <svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg>
-            Directions
-          </a>
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-value">4.6<svg class="stat-star" aria-hidden="true"><use href="#icon-star"/></svg></span>
+            <span class="stat-value" data-count="4.6">4.6</span>
             <span class="stat-label">Google Rating</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
-            <span class="stat-value">195+</span>
+            <span class="stat-value" data-count="195">195+</span>
             <span class="stat-label">Reviews</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
@@ -115,33 +107,64 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>NZ-Style Pies</span><span class="marquee-dot">·</span>
+        <span>Barista Coffee</span><span class="marquee-dot">·</span>
+        <span>Fresh Daily</span><span class="marquee-dot">·</span>
+        <span>Takeaway Ready</span><span class="marquee-dot">·</span>
+        <span>Easy Parking</span><span class="marquee-dot">·</span>
+        <span>Laverton North</span><span class="marquee-dot">·</span>
+        <span>NZ-Style Pies</span><span class="marquee-dot">·</span>
+        <span>Barista Coffee</span><span class="marquee-dot">·</span>
+        <span>Fresh Daily</span><span class="marquee-dot">·</span>
+        <span>Takeaway Ready</span><span class="marquee-dot">·</span>
+        <span>Easy Parking</span><span class="marquee-dot">·</span>
+        <span>Laverton North</span><span class="marquee-dot">·</span>
+      </div>
+    </div>
+
     <section class="highlights">
-      <div class="container highlights-grid">
-        <div class="highlight-card">
-          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pie"/></svg></span>
-          <strong>NZ-Style Pies</strong>
-          <span>Pepper steak, butter chicken & more</span>
+      <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">01</span>
+          <span class="index-label">What we do best</span>
         </div>
-        <div class="highlight-card">
-          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-coffee"/></svg></span>
-          <strong>Barista Coffee</strong>
-          <span>Flat whites, lattes & long blacks</span>
-        </div>
-        <div class="highlight-card">
-          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-takeaway"/></svg></span>
-          <strong>Takeaway Ready</strong>
-          <span>Grab & go before work or lunch</span>
-        </div>
-        <div class="highlight-card">
-          <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-parking"/></svg></span>
-          <strong>Easy Parking</strong>
-          <span>Plenty of parking out front</span>
+        <div class="highlights-grid">
+          <article class="highlight-card reveal">
+            <span class="highlight-num">01</span>
+            <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pie"/></svg></span>
+            <strong>NZ-Style Pies</strong>
+            <span>Pepper steak, butter chicken & more</span>
+          </article>
+          <article class="highlight-card reveal">
+            <span class="highlight-num">02</span>
+            <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-coffee"/></svg></span>
+            <strong>Barista Coffee</strong>
+            <span>Flat whites, lattes & long blacks</span>
+          </article>
+          <article class="highlight-card reveal">
+            <span class="highlight-num">03</span>
+            <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-takeaway"/></svg></span>
+            <strong>Takeaway Ready</strong>
+            <span>Grab & go before work or lunch</span>
+          </article>
+          <article class="highlight-card reveal">
+            <span class="highlight-num">04</span>
+            <span class="highlight-icon"><svg class="icon" aria-hidden="true"><use href="#icon-parking"/></svg></span>
+            <strong>Easy Parking</strong>
+            <span>Plenty of parking out front</span>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="about section" id="about">
       <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">02</span>
+          <span class="index-label">Our story</span>
+        </div>
         <div class="about-showcase reveal">
           <div class="about-photo-wrap">
             <img src="assets/images/hero.jpg" alt="Fresh pies, sandwiches and cakes on display at Laverton Award Bakery" class="about-photo">
@@ -153,8 +176,7 @@
         </div>
         <div class="about-grid">
           <div class="about-content reveal">
-            <span class="section-tag">Our Story</span>
-            <h2 class="section-title">Laverton's Favourite Local Bakery</h2>
+            <h2 class="section-title">Laverton's favourite<br>local bakery.</h2>
             <p class="about-text">Laverton Award Bakery Cafe and Takeaway is a cherished neighbourhood spot known for authentic New Zealand–style pies, flaky pastry, and generous fillings. From early-morning tradies to weekend families, we serve the community with warmth and quality.</p>
             <p class="about-text">Our self-service display is stocked daily with savoury pies, fresh sandwiches, cakes and slices. Pair your pie with a barista coffee and experience why locals — and visitors from across Melbourne — keep coming back.</p>
           </div>
@@ -194,9 +216,12 @@
 
     <section class="menu section" id="menu">
       <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">03</span>
+          <span class="index-label">What we serve</span>
+        </div>
         <div class="section-header reveal">
-          <span class="section-tag">What We Serve</span>
-          <h2 class="section-title">Our Menu</h2>
+          <h2 class="section-title">Our menu.</h2>
           <p class="section-desc">Generous portions and flavours that keep you coming back. Most items $5–$12.</p>
         </div>
 
@@ -294,9 +319,12 @@
 
     <section class="gallery section" id="gallery">
       <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">04</span>
+          <span class="index-label">Inside our bakery</span>
+        </div>
         <div class="section-header reveal">
-          <span class="section-tag">Inside Our Bakery</span>
-          <h2 class="section-title">Fresh From the Display</h2>
+          <h2 class="section-title">Fresh from the display.</h2>
           <p class="section-desc">Self-service counters stocked daily with pies, sandwiches, cakes and more.</p>
         </div>
         <div class="gallery-showcase reveal">
@@ -329,9 +357,12 @@
 
     <section class="reviews section" id="reviews">
       <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">05</span>
+          <span class="index-label">What people say</span>
+        </div>
         <div class="section-header reveal">
-          <span class="section-tag">What People Say</span>
-          <h2 class="section-title">Loved by Locals</h2>
+          <h2 class="section-title">Loved by locals.</h2>
           <div class="rating-display">
             <span class="rating-stars" aria-label="4.6 out of 5 stars">★★★★★</span>
             <span class="rating-text">4.6 on Google · 195+ reviews</span>
@@ -358,10 +389,14 @@
     </section>
 
     <section class="visit section" id="visit">
-      <div class="container visit-grid">
+      <div class="container">
+        <div class="section-index reveal">
+          <span class="index-num">06</span>
+          <span class="index-label">Find us</span>
+        </div>
+        <div class="visit-grid">
         <div class="visit-info reveal">
-          <span class="section-tag">Find Us</span>
-          <h2 class="section-title">Visit Us Today</h2>
+          <h2 class="section-title">Visit us today.</h2>
           <address class="visit-address">
             <strong>Laverton Award Bakery Cafe and Takeaway</strong><br>
             Unit 9/110-116 Fitzgerald Rd<br>
@@ -392,25 +427,24 @@
         <div class="visit-map reveal">
           <iframe title="Laverton Award Bakery on Google Maps" src="https://maps.google.com/maps?q=Laverton+Award+Bakery+Cafe+and+Takeaway,+Unit+9/110-116+Fitzgerald+Rd,+Laverton+North+VIC+3026&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        </div>
       </div>
     </section>
 
     <section class="contact section" id="contact">
       <div class="container">
         <div class="contact-card reveal">
-          <img src="assets/logo.svg" alt="" class="contact-logo" width="80" height="80">
           <div class="contact-content">
-            <span class="section-tag">Get in Touch</span>
-            <h2 class="section-title">Ready for a Great Pie?</h2>
-            <p>Call ahead for large orders or catering. We'd love to hear from you.</p>
+            <p class="contact-eyebrow">Ready for a great pie?</p>
+            <a href="tel:+61499999991" class="contact-phone">0499 999 991</a>
+            <p class="contact-desc">Call ahead for large orders or catering. We'd love to hear from you.</p>
             <div class="contact-details">
-              <a href="tel:+61499999991" class="contact-link"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span>0499 999 991</a>
               <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg></span>Unit 9/110-116 Fitzgerald Rd, Laverton North</a>
             </div>
           </div>
           <div class="contact-cta">
             <a href="tel:+61499999991" class="btn btn-primary btn-large"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Call Now</a>
-            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg> Directions</a>
+            <a href="https://maps.app.goo.gl/9DSC4i8yKM9tPZmj9" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-large"><svg class="icon" aria-hidden="true"><use href="#icon-location"/></svg> Directions</a>
           </div>
         </div>
       </div>

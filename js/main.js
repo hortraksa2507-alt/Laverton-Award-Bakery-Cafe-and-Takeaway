@@ -92,6 +92,36 @@
     });
   }
 
+  function initMenuTabs() {
+    const tabs = document.querySelectorAll('.menu-tab');
+    const panels = document.querySelectorAll('.menu-panel');
+    if (!tabs.length) return;
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+
+        tabs.forEach((t) => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach((p) => {
+          p.classList.remove('active');
+          p.hidden = true;
+        });
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const panel = document.querySelector(`[data-panel="${target}"]`);
+        if (panel) {
+          panel.classList.add('active');
+          panel.hidden = false;
+        }
+      });
+    });
+  }
+
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
@@ -114,4 +144,5 @@
 
   initReveal();
   initSmoothNav();
+  initMenuTabs();
 })();

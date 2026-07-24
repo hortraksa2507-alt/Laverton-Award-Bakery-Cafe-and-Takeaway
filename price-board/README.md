@@ -1,16 +1,37 @@
-# React + Vite
+# Laverton Award Bakery — Price Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Visual price board for cashiers: search by name or match items by photo. Prices for hot food and drinks without labels can be set once in Edit mode and are remembered via browser storage.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+cd price-board
+npm install
+npm run dev
+```
 
-## React Compiler
+Open the URL Vite prints (usually http://localhost:5173).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the Oxlint configuration
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Storage
+
+Uses `window.storage` when available (Cursor web app), with a `localStorage` fallback shim in `src/storageShim.js`.
+
+- Menu: `laverton-menu-v4`
+- Cashier-uploaded photos: `labphoto-{itemId}`
+
+## Photos
+
+Cabinet photos live in `src/photosRaw.js` as base64 webp. Items without a photo show SVG illustrations from `FoodIcon.jsx`. Aliases (e.g. `d02` → `d01`) are defined in `FoodIcon.jsx`.
+
+To restore the full photo set from the original paste, drop the `PHOTOS_RAW` block into `scripts/photos-source.js` and run:
+
+```bash
+python3 scripts/write-photos-batch1.py
+```

@@ -28,10 +28,10 @@ Uses `window.storage` when available (Cursor web app), with a `localStorage` fal
 
 ## Photos
 
-Cabinet photos live in `src/photosRaw.js` as base64 webp. Items without a photo show SVG illustrations from `FoodIcon.jsx`. Aliases (e.g. `d02` → `d01`) are defined in `FoodIcon.jsx`.
+Cabinet photos live in `src/photosRaw.js` as base64 webp (70 entries). Items without a direct photo show SVG illustrations from `FoodIcon.jsx`. Aliases (e.g. `d02` → `d01`) are defined in `FoodIcon.jsx`.
 
-To restore the full photo set from the original paste, drop the `PHOTOS_RAW` block into `scripts/photos-source.js` and run:
+To regenerate `photosRaw.js` after editing the source paste:
 
 ```bash
-python3 scripts/write-photos-batch1.py
+python3 scripts/parse-photos-source.py
 ```
